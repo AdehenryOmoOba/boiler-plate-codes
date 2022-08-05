@@ -1,6 +1,7 @@
 import dontenv from "dotenv";
 import mongoose from "mongoose";
 import express from "express";
+import cors from "cors";
 import { router as homePageRouter } from "./routes/home.js";
 import { router as authRouter } from "./routes/auth.js";
 import { router as commentsRouter } from "./routes/comments.js";
@@ -15,6 +16,7 @@ const databaseURI = process.env.DB_URI;
 const PORT = 4100;
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(homePageRouter);
