@@ -10,8 +10,6 @@ function DatabaseEmail() {
     emailDispatch(fetchEmails());
   }, [emailDispatch]);
 
-  console.log(emails);
-
   return (
     <div>
       {emails.loading && <h5>Loading...</h5>}
