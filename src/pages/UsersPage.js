@@ -1,5 +1,5 @@
 import React from "react";
-import Users from "../components/Users";
+import GetApiUsers from "../react-query/GetApiUsers";
 
 function UsersPage() {
   return (
@@ -7,7 +7,7 @@ function UsersPage() {
       <h2>
         Users List <small style={{ fontSize: "1rem" }}>from API</small>
       </h2>
-      <Users />
+      <GetApiUsers />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import DatabaseEmail from "../components/DatabaseEmail";
+import GetServerEmails from "../react-query/GetServerEmails";
 
 function DatabaseEmailPage() {
   return (
@@ -7,7 +7,7 @@ function DatabaseEmailPage() {
       <h2>
         Emails <small style={{ fontSize: "1rem" }}>from Database</small>
       </h2>
-      <DatabaseEmail />
+      <GetServerEmails />
     </div>
   );
 }
