@@ -1,4 +1,4 @@
-import pool from "../postgresDB.js";
+import { blogsPool as pool } from "../postgresDB.js";
 
 export const createBlogController = async (req, res, next) => {
   try {

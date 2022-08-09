@@ -8,6 +8,7 @@ import { router as usersRouter } from "./routes/users.js";
 import { router as pageNotFoundRouter } from "./routes/pageNotFound.js";
 import cookieParser from "cookie-parser";
 import { router as blogsRouter } from "./routes/blogs.js";
+import { router as studentsRouter } from "./routes/students.js";
 
 if (process.env.NODE_ENV !== "production") dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(homePageRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/blogs", blogsRouter);
+app.use("/api/students", studentsRouter);
 app.use("/*", pageNotFoundRouter);
 // Error handler middleware
 app.use((error, req, res, next) => {

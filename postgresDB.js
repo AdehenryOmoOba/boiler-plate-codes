@@ -4,7 +4,7 @@ const { Pool } = poolPackage;
 
 if (process.env.NODE_ENV !== "production") dotenv.config();
 
-const pool = new Pool({
+export const blogsPool = new Pool({
   user: "postgres",
   password: process.env.PSQL_DB_PASSWORD,
   database: "youtube_clone_db",
@@ -12,4 +12,10 @@ const pool = new Pool({
   port: 5432,
 });
 
-export default pool;
+export const studentsPool = new Pool({
+  user: "postgres",
+  password: process.env.PSQL_DB_PASSWORD,
+  database: "phoebestar",
+  host: "localhost",
+  port: 5432,
+});
