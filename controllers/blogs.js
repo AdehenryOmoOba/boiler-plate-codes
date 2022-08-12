@@ -15,7 +15,9 @@ export const createBlogController = async (req, res, next) => {
 
 export const getAllBlogsController = async (req, res, next) => {
   try {
-    const { rows } = await pool.query("SELECT * FROM blogs");
+    const { rows } = await pool.query(
+      "SELECT id, title, content, posted_at FROM blogs ORDER BY posted_at DESC"
+    );
     res.status(200).json(rows);
   } catch (error) {
     next(error);
